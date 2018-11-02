@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Backup current configuration to backup file.
+background=$(gsettings get io.elementary.terminal.settings background)
+foreground=$(gsettings get io.elementary.terminal.settings foreground)
+cursor=$(gsettings get io.elementary.terminal.settings cursor-color)
+palette=$(gsettings get io.elementary.terminal.settings palette)
+printf "$background\n$foreground\n$cursor\n$palette\n" > backup
+
+# TODO: Dracula theme
 COLOR_01="#44475a"                # HOST
 COLOR_02="#ff5555"                # SYNTAX_STRING
 COLOR_03="#50fa7b"                # COMMAND
@@ -22,6 +30,7 @@ BACKGROUND_COLOR="#282a36"        # Background Color
 FOREGROUND_COLOR="#dddfe6"        # Text
 CURSOR_COLOR="$FOREGROUND_COLOR"  # Cursor
 
+# Set terminal color theme settings.
 gsettings set io.elementary.terminal.settings background "${BACKGROUND_COLOR}"
 gsettings set io.elementary.terminal.settings foreground "${FOREGROUND_COLOR}"
 gsettings set io.elementary.terminal.settings cursor-color "${CURSOR_COLOR}"
