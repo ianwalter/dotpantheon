@@ -1,6 +1,8 @@
 # dotpantheon
 > Ian's [Pantheon Terminal][ptUrl] config (part of [dotfiles][dotfilesUrl])
 
+<img alt="Pantheon Screenshot" src="screenshot.png">
+
 ## Installation
 
 ```console
