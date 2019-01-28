@@ -41,3 +41,6 @@ gsettings set io.elementary.terminal.settings follow-last-tab true
 
 # Make the cursor an I-Beam instead of a Block.
 gsettings set io.elementary.terminal.settings cursor-shape I-Beam
+
+# Set the font family and font size.
+gsettings set io.elementary.terminal.settings font "SF Mono, 14"
